@@ -1,3 +1,10 @@
+# Importing modules
+print("Importing modules...")
+
+import time
+import sys
+import os
+
 try:
     import pyautogui as pygui
 except:
@@ -22,6 +29,6 @@ except:
     print("You need to install the pytesseract module (pip install pytesseract).")
     sys.exit()
 
-import time
-import sys
-import os
+print("Done!")
+
+cd = os.getcwd()
