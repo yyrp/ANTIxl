@@ -41,4 +41,6 @@ print("Done!")
 print()
 print()
 print()
+
+# Prints keyboard and screenshot warning if it's the first time running.
 screenshot_verify()
