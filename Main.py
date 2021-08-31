@@ -29,10 +29,16 @@ except:
     print("You need to install the pytesseract module (pip install pytesseract).")
     sys.exit()
 
-from cd+"/Data/ExternalModules/ScreenshotVerify.py" import screenshot_verify
+cd = os.getcwd()
+sys.path.insert(1, cd+'/Data/ExternalModules')
+
+from ScreenshotVerify import screenshot_verify
+
+sys.path.insert(1, cd)
 
 print("Done!")
 
+print()
+print()
+print()
 screenshot_verify()
-
-cd = os.getcwd()
