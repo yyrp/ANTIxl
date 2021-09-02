@@ -1,3 +1,6 @@
+## WARNING
+This is a very unprofessional GitHub repository. If you have any complaints, I'm too lazy so I probably won't do anything about it.
+
 # IXL-BOT
 
 I'll put stuff here later...
