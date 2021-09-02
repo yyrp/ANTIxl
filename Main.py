@@ -29,7 +29,7 @@ except:
     print("You need to install the pytesseract module (pip install pytesseract).")
     sys.exit()
 
-cd = os.getcwd()
+cd = os.path.realpath('IXL-Bot')
 sys.path.insert(1, cd+'/Data/ExternalModules')
 
 from ScreenshotVerify import screenshot_verify

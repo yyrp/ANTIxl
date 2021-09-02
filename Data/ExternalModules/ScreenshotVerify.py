@@ -1,7 +1,7 @@
 def screenshot_verify():
     import os
 
-    cd = os.getcwd()
+    cd = os.path.realpath('IXL-Bot')
     f = open(cd+"/Data/PermissionVerification.txt", 'r')
 
     info = f.read()
