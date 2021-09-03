@@ -6,15 +6,15 @@ import sys
 import os
 
 try:
-    import pyautogui as pygui
+    import tkinter as tk
 except:
-    print("You need to install the pyautogui module (pip install pyautogui).")
+    print("You need to install the tkinter module (sudo apt-get install python3-tk python3-dev).")
     sys.exit()
 
 try:
-    import tkinter as tk
+    import pyautogui as pygui
 except:
-    print("You need to install the tkinter module (pip install tkinter).")
+    print("You need to install the pyautogui module (pip install pyautogui).")
     sys.exit()
 
 try:
@@ -29,10 +29,14 @@ except:
     print("You need to install the pytesseract module (pip install pytesseract).")
     sys.exit()
 
-cd = os.path.realpath('IXL-Bot')
+cd = os.getcwd()
 sys.path.insert(1, cd+'/Data/ExternalModules')
 
 from ScreenshotVerify import screenshot_verify
+
+from ScreenshotModules import take_screenshot
+
+from ScreenshotModules import save_screenshot
 
 sys.path.insert(1, cd)
 
@@ -42,5 +46,27 @@ print()
 print()
 print()
 
+def scan_func():
+    dir = cd+"/Data/Screenshot"
+    for f in os.listdir(dir):
+        os.remove(os.path.join(dir, f))
+
+    ss = take_screenshot()
+    save_screenshot(ss)
+
+    return "Done!"
+
 # Prints keyboard and screenshot warning if it's the first time running.
 screenshot_verify()
+
+# This is where the actual script starts
+pygui.alert("Welcome.")
+while True:
+    main_input = pygui.confirm("...", buttons=["Scan", "Quit"])
+
+    if main_input == "Quit":
+        sys.exit()
+    elif main_input == "Scan":
+        scan_func()
+    else:
+        pygui.alert("Please enter a valid action.")

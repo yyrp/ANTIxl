@@ -6,5 +6,5 @@ def take_screenshot():
     return ss
 
 def save_screenshot(ss):
-    cd = os.path.realpath('IXL-Bot')
+    cd = os.getcwd()
     ss.save(cd+"/Data/Screenshots")
