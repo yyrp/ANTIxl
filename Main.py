@@ -4,6 +4,7 @@ print("Importing modules...")
 import time
 import sys
 import os
+from PIL import Image
 
 try:
     import tkinter as tk
@@ -36,8 +37,6 @@ from ScreenshotVerify import screenshot_verify
 
 from ScreenshotModules import take_screenshot
 
-from ScreenshotModules import save_screenshot
-
 sys.path.insert(1, cd)
 
 print("Done!")
@@ -51,9 +50,7 @@ def scan_func():
     for f in os.listdir(dir):
         os.remove(os.path.join(dir, f))
 
-    ss = take_screenshot()
-    save_screenshot(ss)
-
+    take_screenshot()
     return "Done!"
 
 # Prints keyboard and screenshot warning if it's the first time running.
