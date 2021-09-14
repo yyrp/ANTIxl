@@ -39,6 +39,8 @@ from ScreenshotVerify import screenshot_verify
 
 from ScreenshotModules import take_screenshot
 
+from UserInterface import main_menu
+
 sys.path.insert(1, cd)
 
 print("Done!")
@@ -60,6 +62,9 @@ screenshot_verify()
 
 # This is where the actual script starts
 pygui.alert("Welcome.")
+
+main_menu()
+
 while True:
     main_input = pygui.confirm("...", buttons=["Scan", "Quit"])
 
