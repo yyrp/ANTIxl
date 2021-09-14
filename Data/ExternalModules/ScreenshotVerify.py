@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def screenshot_verify():
     import os
 
