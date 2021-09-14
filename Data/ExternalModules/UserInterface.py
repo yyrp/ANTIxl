@@ -1,10 +1,15 @@
 import tkinter as tk
 import pyautogui as pygui
 import sys
+import os
 
 def main_menu():
+    cd = os.getcwd()
+
     def test():
+        print("Button pressed.")
         pygui.alert("You pressed a button.")
+
     window = tk.Tk()
 
     def test_2():
@@ -17,6 +22,11 @@ def main_menu():
     main_frame = tk.LabelFrame(
         background_frame,
         background = "white",
+    )
+
+    side_image = tk.Label(
+        background_frame,
+        image = cd+"\Other\Side_Logo.png",
     )
 
     start_button = tk.Button(
