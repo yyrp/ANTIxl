@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Importing modules
 print("Importing modules...")
 
