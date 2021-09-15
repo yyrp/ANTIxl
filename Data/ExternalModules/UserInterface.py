@@ -6,12 +6,9 @@ import sys
 
 def main_menu():
     while True:
-        def next_screen():
-            break
-
         window = tk.Tk()
 
-        def quit():
+        def quit_func():
             sys.exit()
 
         def info_func():
@@ -36,7 +33,7 @@ def main_menu():
             font=("Arial", 50),
             width = "12",
             height = "2",
-            command = next_screen,
+            command = "break",
         )
 
         info_button = tk.Button(
@@ -54,7 +51,7 @@ def main_menu():
 
         quit_button = tk.Button(
             background_frame,
-            text = "Quit",
+            text = "Exit",
             foreground = "white",
             background = "red",
             activebackground = "grey",
@@ -62,7 +59,7 @@ def main_menu():
             font=("Arial", 25),
             width = "11",
             height = "1",
-            command = test_2,
+            command = quit_func,
         )
 
         start_button.pack()
