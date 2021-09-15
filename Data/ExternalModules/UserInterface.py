@@ -6,7 +6,6 @@ import sys
 import os
 
 def main_menu():
-<<<<<<< HEAD
     cd = os.getcwd()
 
     def test():
@@ -14,13 +13,11 @@ def main_menu():
         pygui.alert("You pressed a button.")
 
     window = tk.Tk()
-=======
     while True:
         window = tk.Tk()
 
         def quit_func():
             sys.exit()
->>>>>>> 7d14c97ba5be6bc8433a0f158feb5405ec78b6d7
 
         def info_func():
             pygui.alert("Made by Lucas Maritato\nOS: Windows 10, Linux\n(Sadly, it can't run on Chromebook.)")
@@ -34,25 +31,6 @@ def main_menu():
             background = "white",
         )
 
-<<<<<<< HEAD
-    side_image = tk.Label(
-        background_frame,
-        image = cd+"\Other\Side_Logo.png",
-    )
-
-    start_button = tk.Button(
-        main_frame,
-        text = "Start",
-        foreground = "white",
-        background = "#00FF06",
-        activebackground = "green",
-        activeforeground = "white",
-        font=("Arial", 50),
-        width = "12",
-        height = "2",
-        command = test,
-    )
-=======
         start_button = tk.Button(
             main_frame,
             text = "Start",
@@ -63,9 +41,8 @@ def main_menu():
             font=("Arial", 50),
             width = "12",
             height = "2",
-            command = "break",
+            command = quit_func,
         )
->>>>>>> 7d14c97ba5be6bc8433a0f158feb5405ec78b6d7
 
         info_button = tk.Button(
             background_frame,
