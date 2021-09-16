@@ -11,7 +11,7 @@ USING THIS IS CONSIDERED CHEATING! Please do not use this unless you have extrem
 The pyautogui.screenshot() function only returns a black screen.
 
 ## INFO
- This can run on Windows and Linux. (Sadly, it can't run on ChromeOS, but there is a way to get it to run on a Chromebook using crouton [https://github.com/dnschneid/crouton].)
+ This can run on Windows and Linux. (Sadly, it can't run on ChromeOS, but there is probably a way to get it to run on a Chromebook using crouton [https://github.com/dnschneid/crouton].)
 
  It uses the following Python libraries:
 - pyaugoui
