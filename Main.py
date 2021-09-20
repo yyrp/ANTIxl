@@ -6,7 +6,6 @@ print("Importing modules...")
 import time
 import sys
 import os
-from PIL import Image
 
 try:
     import tkinter as tk
@@ -49,7 +48,7 @@ print()
 print()
 print()
 
-def scan_func():
+def take_screenshot_func():
     dir = cd+"/Data/Screenshot"
     for f in os.listdir(dir):
         os.remove(os.path.join(dir, f))
@@ -63,14 +62,16 @@ screenshot_verify()
 # This is where the actual script starts
 pygui.alert("Welcome.")
 
+# Displays the main menu
 main_menu()
 
+# This is the main loop. It will later be removed.
 while True:
     main_input = pygui.confirm("...", buttons=["Scan", "Quit"])
 
     if main_input == "Quit":
         sys.exit()
     elif main_input == "Scan":
-        scan_func()
+        take_screenshot_func()
     else:
         pygui.alert("Please enter a valid action.")

@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 
+from PIL import Image, ImageTk
 import tkinter as tk
+from tkinter import *
 import pyautogui as pygui
 import sys
 import os
 
 def main_menu():
     cd = os.getcwd()
-
-    def test():
-        print("Button pressed.")
-        pygui.alert("You pressed a button.")
-
     window = tk.Tk()
+
+    # side_image_1 = PIL.Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
+    # side_image_var = ImageTk.PhotoImage(side_image_1)
+    side_image_var = ImageTk.PhotoImage(Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png"))
     while True:
         window = tk.Tk()
 
@@ -26,8 +27,12 @@ def main_menu():
             background = "white",
         )
 
+        background_frame_1 = tk.LabelFrame(
+            background = "white",
+        )
+
         main_frame = tk.LabelFrame(
-            background_frame,
+            background_frame_1,
             background = "white",
         )
 
@@ -41,11 +46,16 @@ def main_menu():
             font=("Arial", 50),
             width = "12",
             height = "2",
-            command = quit_func,
+            command = "break",
+        )
+
+        side_logo = tk.Label(
+            background_frame,
+            image = side_image_var,
         )
 
         info_button = tk.Button(
-            background_frame,
+            background_frame_1,
             text = "Info",
             foreground = "white",
             background = "yellow",
@@ -58,7 +68,7 @@ def main_menu():
         )
 
         quit_button = tk.Button(
-            background_frame,
+            background_frame_1,
             text = "Exit",
             foreground = "white",
             background = "red",
@@ -74,6 +84,8 @@ def main_menu():
         main_frame.pack(padx=0, pady=0)
         info_button.pack(side=tk.LEFT)
         quit_button.pack(side=tk.RIGHT)
+        side_logo.pack(side=tk.RIGHT)
+        background_frame_1.pack(side=tk.LEFT)
         background_frame.pack()
 
         window.mainloop()
