@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-from PIL import Image, ImageTk
 import tkinter as tk
 from tkinter import *
+from PIL import Image, ImageTk
 import pyautogui as pygui
 import sys
 import os
@@ -13,7 +13,12 @@ def main_menu():
 
     # side_image_1 = PIL.Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
     # side_image_var = ImageTk.PhotoImage(side_image_1)
-    side_image_var = ImageTk.PhotoImage(Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png"))
+    #side_image_var = ImageTk.PhotoImage(Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png"))
+
+    # Creates a photoimage object of the image in the path
+    image1 = Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
+    side_image_var = ImageTk.PhotoImage(image1)
+
     while True:
         window = tk.Tk()
 

@@ -3,6 +3,7 @@
 # Importing modules
 print("Importing modules...")
 
+import PIL.Image
 import time
 import sys
 import os
