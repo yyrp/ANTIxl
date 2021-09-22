@@ -9,18 +9,13 @@ import os
 
 def main_menu():
     cd = os.getcwd()
-    window = tk.Tk()
-
-    # side_image_1 = PIL.Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
-    # side_image_var = ImageTk.PhotoImage(side_image_1)
-    #side_image_var = ImageTk.PhotoImage(Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png"))
-
-    # Creates a photoimage object of the image in the path
-    image1 = Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
-    side_image_var = ImageTk.PhotoImage(image1)
 
     while True:
         window = tk.Tk()
+
+        # Creates a photoimage object of the image in the path
+        image1 = Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
+        side_image_var = ImageTk.PhotoImage(image1)
 
         def quit_func():
             sys.exit()
