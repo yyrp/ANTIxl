@@ -3,23 +3,15 @@
 # Importing modules
 print("Importing modules...")
 
-import PIL.Image
-import time
 import sys
 import os
-
-try:
-    import tkinter as tk
-except:
-    print("You need to install the tkinter module (sudo apt-get install python3-tk python3-dev).")
-    sys.exit()
 
 try:
     import pyautogui as pygui
 except:
     print("You need to install the pyautogui module (pip install pyautogui).")
     sys.exit()
-
+# ------------------------This will be removed later----------------------------
 try:
     import cv2
 except:
@@ -32,6 +24,8 @@ except:
     print("You need to install the pytesseract module (pip install pytesseract).")
     sys.exit()
 
+# ------------------------------------------------------------------------------
+
 cd = os.getcwd()
 sys.path.insert(1, cd+'/Data/ExternalModules')
 
@@ -39,7 +33,7 @@ from ScreenshotVerify import screenshot_verify
 
 from ScreenshotModules import take_screenshot
 
-from UserInterface import main_menu
+from MainMenu import main_menu
 
 sys.path.insert(1, cd)
 

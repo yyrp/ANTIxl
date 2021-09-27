@@ -1,11 +1,21 @@
 #!/usr/bin/python3
 
-import tkinter as tk
-from tkinter import *
 from PIL import Image, ImageTk
-import pyautogui as pygui
 import sys
 import os
+
+try:
+    import tkinter as tk
+    from tkinter import *
+except:
+    print("You need to install the tkinter module (sudo apt-get install python3-tk python3-dev).")
+    sys.exit()
+
+try:
+    import pyautogui as pygui
+except:
+    print("You need to install the pyautogui module (pip install pyautogui).")
+    sys.exit()
 
 def main_menu():
     cd = os.getcwd()
@@ -19,9 +29,11 @@ def main_menu():
 
         def quit_func():
             sys.exit()
-
         def info_func():
             pygui.alert("Made by Lucas Maritato\nOS: Windows 10, Linux\n(Sadly, it can't run on Chromebook.)")
+        def next_screen_func():
+            #break
+            pass
 
         background_frame = tk.LabelFrame(
             background = "white",
@@ -46,7 +58,7 @@ def main_menu():
             font=("Arial", 50),
             width = "12",
             height = "2",
-            command = "break",
+            command = 'break',
         )
 
         side_logo = tk.Label(
