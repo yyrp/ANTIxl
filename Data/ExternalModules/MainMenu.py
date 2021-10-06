@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from PIL import Image, ImageTk
+import PIL.Image
 import sys
 import os
 
@@ -24,8 +25,10 @@ def main_menu():
         window = tk.Tk()
 
         # Creates a photoimage object of the image in the path
-        image1 = Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
-        side_image_var = ImageTk.PhotoImage(image1)
+        # image1 = Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
+        image1 = open(cd+r"/Data/ExternalModules/Other/Side_Logo.png", "rb")
+        # imgtk = ImageTk.PhotoImage(image=PIL.Image.fromarray(image1))
+        side_image_var = PhotoImage(file=cd+r"/Data/ExternalModules/Other/Side_Logo.png")
 
         def quit_func():
             sys.exit()
