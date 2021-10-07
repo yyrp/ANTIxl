@@ -23,5 +23,12 @@ You can reuse any of this code (This has a GNU General Public License).
 
 I'm going to put a password on this so I know who's using it, but if you know Python, it'll be pretty easy to get rid of the password.
 
+## IXL INFORMATION
+- Main website: https://www.ixl.com/
+- Twitter: https://twitter.com/IXLLearning?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+- Facebook: https://www.facebook.com/IXL/
+
+(I'm putting this here so they don't sue me.)
+
 ## THIS IS NOWHERE NEAR FINISHED
 This project is a work in progress. It is not currently usable. It will be added to "Releases" once a usable version comes out.
