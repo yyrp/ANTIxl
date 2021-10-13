@@ -4,11 +4,13 @@ This is a very unprofessional GitHub repository. If you have any complaints, I'm
 # IXL-BOT
 This is a program that does IXL automatically. It takes a screenshot, scans the screenshot for text, solves the problem, and types it it. This is nowhere near finished. There is probably a way more efficient way of doing this but I don't care.
 
-## IMPORTANT:
+### IMPORTANT:
 USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT MY FAULT. Please do not use this unless you have extreme anxiety and depression from IXL.
 
-## (Also I'm sad. This doesn't work on Chromebook.)
-Below is a list of functions that don't work on Chromebook
+## THIS CURRENTLY DOES NOT WORK ON CHROMEBOOK
+I am writing most of this code from my Chromebook at school. I'm pretty sure most schools use Chromebook, so I'm trying to get this to work on that.
+
+Below is a list of functions that don't work on Chromebook.
 I still need to test if the screenshot function would work in a chroot.
 
 LIST OF STUFF THAT DOESN'T WORK (This will be updated):
