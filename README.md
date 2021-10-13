@@ -8,7 +8,11 @@ This is a program that does IXL automatically. It takes a screenshot, scans the 
 USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT MY FAULT. Please do not use this unless you have extreme anxiety and depression from IXL.
 
 ## (Also I'm sad. This doesn't work on Chromebook.)
-The  ```pyautogui.screenshot()``` function only returns a black screen.
+Below is a list of functions that don't work on Chromebook
+I still need to test if the screenshot function would work in a chroot.
+
+LIST OF STUFF THAT DOESN'T WORK (This will be updated):
+- ```pyautogui.screenshot()``` - It works, but it just returns a black screen.
 
 ## If Someone From IXL Sees This
 Please don't sue me.
@@ -35,3 +39,5 @@ I'm going to put a password on this so I know who's using it, but if you know Py
 
 ## THIS IS NOWHERE NEAR FINISHED
 This project is a work in progress. It is not currently usable. It will be added to "Releases" once a usable version comes out.
+
+If you need to contact me you can email [hxl5900@gmail.com](mailto:hxl5900@gmail.com?subject=[IXL-Bot]%20Source%20Han%20Sans).
