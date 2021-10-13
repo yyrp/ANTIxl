@@ -7,8 +7,11 @@ This is a program that does IXL automatically. It takes a screenshot, scans the 
 ## IMPORTANT:
 USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT MY FAULT. Please do not use this unless you have extreme anxiety and depression from IXL.
 
-## (Also me sad. This doesn't work on Chromebook.)
+## (Also I'm sad. This doesn't work on Chromebook.)
 The  ```pyautogui.screenshot()``` function only returns a black screen.
+
+## If Someone From IXL Sees This
+Please don't sue me.
 
 ## INFO
  This can run on Windows and Linux. (Sadly, it can't run on ChromeOS, but there might be a way to get it to run on a Chromebook using crouton [https://github.com/dnschneid/crouton]. I'll test this later.)
@@ -29,9 +32,6 @@ I'm going to put a password on this so I know who's using it, but if you know Py
 - Facebook: https://www.facebook.com/IXL/
 
 (I'm putting this here so they don't sue me.)
-
-## If Someone From IXL Sees This
-Please don't sue me.
 
 ## THIS IS NOWHERE NEAR FINISHED
 This project is a work in progress. It is not currently usable. It will be added to "Releases" once a usable version comes out.
