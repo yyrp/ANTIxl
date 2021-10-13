@@ -30,5 +30,8 @@ I'm going to put a password on this so I know who's using it, but if you know Py
 
 (I'm putting this here so they don't sue me.)
 
+# IF SOMEONE FROM IXL SEES THIS
+Please don't sue me.
+
 ## THIS IS NOWHERE NEAR FINISHED
 This project is a work in progress. It is not currently usable. It will be added to "Releases" once a usable version comes out.
