@@ -26,9 +26,9 @@ def main_menu():
 
         # Creates a photoimage object of the image in the path
         # image1 = Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
-        image1 = open(cd+r"/Data/ExternalModules/Other/Side_Logo.png", "rb")
+        image1 = open(cd+r"/_data/_external_functions/_other/side_sogo.png", "rb")
         # imgtk = ImageTk.PhotoImage(image=PIL.Image.fromarray(image1))
-        side_image_var = PhotoImage(file=cd+r"/Data/ExternalModules/Other/Side_Logo.png")
+        side_image_var = PhotoImage(file=cd+r"/_data/_external_functions/_other/side_logo.png")
 
         def quit_func():
             sys.exit()
