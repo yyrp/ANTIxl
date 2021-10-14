@@ -74,7 +74,7 @@ elif platform.system() == "Linux":
 library_install_check()
 
 cd = os.getcwd()
-sys.path.insert(1, cd+'/Data/ExternalModules')
+sys.path.insert(1, cd+'/Data/ExternalFunctions')
 
 from ScreenshotVerify import screenshot_verify
 
