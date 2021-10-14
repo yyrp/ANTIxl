@@ -8,8 +8,8 @@ import os
 import platform
 
 # These variables are used to see what libraries are or aren't installed
+cv2_error = False
 pygui_error = False
-cv2_error = True
 pytesseract_error = False
 
 # This is the function checks what libraries need to be installed
@@ -18,19 +18,19 @@ def library_install_check():
 
     if platform.system() == "Windows":
         # This adds color to the text if the os is Windows becuase I can't get it to work on Linux
-        if pygui_error == True:
-            libraries_that_need_installed.append("  - \u001b[32mpyautogui\u001b[37m (pip install pyautogui)")
         if cv2_error == True:
             libraries_that_need_installed.append("  - \u001b[32mcv2\u001b[37m (pip install opencv-python)")
             print("food")
+        if pygui_error == True:
+            libraries_that_need_installed.append("  - \u001b[32mpyautogui\u001b[37m (pip install pyautogui)")
         if pytesseract_error == True:
             libraries_that_need_installed.append("  - \u001b[32mpytesseract\u001b[37m (pip install pytesseract)")
 
-            print()
-            print(" \u001b[31mERROR:\u001b[37m You need to install the following libraries:")
-            print(libraries_that_need_installed)
-            print()
-            print()
+        print()
+        print(" \u001b[31mERROR:\u001b[37m You need to install the following libraries:")
+        print(libraries_that_need_installed)
+        print()
+        print()
     else:
         # This is for any other operating system besides Windows
         if pygui_error == True:
@@ -40,11 +40,11 @@ def library_install_check():
         if cv2_error == True:
             libraries_that_need_installed.append("  - cv2 (pip install opencv-python)")
 
-            print()
-            print(" ERROR: You need to install the following libraries:")
-            print("\n".join(libraries_that_need_installed))
-            print()
-            print()
+        print()
+        print(" ERROR: You need to install the following libraries:")
+        print("\n".join(libraries_that_need_installed))
+        print()
+        print()
 
     sys.exit()
 
