@@ -74,7 +74,7 @@ elif platform.system() == "Linux":
 library_install_check()
 
 cd = os.getcwd()
-sys.path.insert(1, cd+'/Data/ExternalFunctions')
+sys.path.insert(1, cd+'/_data/_external_functions')
 
 from ScreenshotVerify import screenshot_verify
 
@@ -91,7 +91,7 @@ print()
 print()
 
 def take_screenshot_func():
-    dir = cd+"/Data/Screenshot"
+    dir = cd+"/_data/_screenshot"
     for f in os.listdir(dir):
         os.remove(os.path.join(dir, f))
 
