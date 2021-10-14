@@ -4,7 +4,7 @@ This is a very unprofessional GitHub repository. If you have any complaints, I'm
 # IXL-BOT
 This is a program that does IXL automatically. It takes a screenshot, scans the screenshot for text, solves the problem, and types it it. This is nowhere near finished. There is probably a way more efficient way of doing this but I don't care.
 
-### IMPORTANT:
+#### IMPORTANT:
 USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT MY FAULT. Please do not use this unless you have extreme anxiety and depression from IXL.
 
 ## THIS CURRENTLY DOES NOT WORK ON CHROMEBOOK
