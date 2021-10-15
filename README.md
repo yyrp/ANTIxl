@@ -6,6 +6,19 @@ This is a program that does IXL automatically. It takes a screenshot, scans the 
 
 ### IMPORTANT:
 USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT MY FAULT. Please do not use this unless you have extreme anxiety and depression from IXL.
+## RELEASE INFORMATION
+(The current version of this program is unusable. When a usable version comes out, it will be added to "Releases".)
+
+### Standard version
+This will have support for lessons saved in the files. This is recommended if you want to get questions correct.
+
+### AI version
+This version will use machine learning to solve problems. It will have to get questions wrong in order to get other questions right.
+
+### Versions
+(Unfinished) VERSION 0.1 Standard [beta]: This will have to be ran from the command line and it will not be an app that gets installed on your system. It will only have support for a few basic IXL lessons. This will probably not be very useful.
+
+(Unfinished) VERSION 0.1 AI [beta]: This will add an AI mode that uses machine learning to solve problems. You probably shouldn't use this version if you want to get all the questions right. It will have to get questions wrong to work properly.
 
 ## THIS CURRENTLY DOES NOT WORK ON CHROMEBOOK
 I am writing most of this code from my Chromebook at school. I'm pretty sure most schools use Chromebook, so I'm trying to get this to work on that.
