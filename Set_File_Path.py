@@ -101,8 +101,8 @@ print("The file path to 'IXL-Bot' is '"+file_path+"'")
 # Writes the file path to all the file path files
 d = open(cd+r"/_data/data_file_path.txt", 'w')
 e = open(cd+r"/_external_functions/ef_file_path.txt", 'w')
-d.write(cd)
-e.write(cd)
+d.write(file_path)
+e.write(file_path)
 d.close()
 e.close()
 
