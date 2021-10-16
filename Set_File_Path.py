@@ -1,15 +1,21 @@
 #!/usr/bin/python3
 
+import time
 import os
 import sys
+from platform import platform
 
 cd = os.getcwd()
 
 if "IXL-Bot" not in cd:
     print("Please move to the parent directory 'IXL-Bot'.")
+    time.sleep(3)
     sys.exit()
 else:
-    pass
+    if platform == "Windows":
+        os.system("cls")
+    elif platform == "Linux":
+        os.system("clear")
 
 while True:
     input1 = input("Is the current working directory set to 'IXL-Bot'? (y/n): ")
@@ -21,6 +27,7 @@ while True:
         print()
         print("Please change the current working directory to 'IXL-Bot'")
         print()
+        time.sleep(3)
         sys.exit()
     elif input1.lower() == "yes":
         break
@@ -28,6 +35,7 @@ while True:
         print()
         print("Please change the current working directory to 'IXL-Bot'")
         print()
+        time.sleep(3)
         sys.exit()
     else:
         print("Please type 'y' or 'n'.")
@@ -57,9 +65,15 @@ while True:
 
 if manual_set == 1:
     while True:
+        print()
         print("Enter the file path to 'IXL_Bot'.")
         manual_set_input = input("(Type here:) ")
 
+        print()
+        print()
+        print()
+        print(manual_set_input)
+        print()
         print("Are you sure this is the correct file path?")
         confirm_input = input("(y/n): ")
         try:
@@ -81,4 +95,17 @@ if manual_set == 1:
 else:
     file_path = cd
 
+print()
 print("The file path to 'IXL-Bot' is '"+file_path+"'")
+
+# Writes the file path to all the file path files
+d = open(cd+r"/_data/data_file_path.txt", 'w')
+e = open(cd+r"/_external_functions/ef_file_path.txt", 'w')
+d.write(cd)
+e.write(cd)
+d.close()
+e.close()
+
+
+time.sleep(3)
+sys.exit()
