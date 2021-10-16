@@ -65,14 +65,22 @@ except:
     pytesseract_error = True
 
 # ------------------------------------------------------------------------------
+
+# This checks the platform of the host to send the right command to clear the termianl
 if platform.system() == "Windows":
     os.system('cls')
 elif platform.system() == "Linux":
     os.system('clear')
 
+# This checks if the required libraries are installed
 library_install_check()
 
-cd = os.getcwd()
+# This gets the current working directory from file path files
+f = open(os.path.join(sys.path[0], "my_file.txt"), "r")
+cd = f.read()
+f.close()
+
+# This imports functions from external scripts
 sys.path.insert(1, cd+'/_external_functions')
 
 from ScreenshotVerify import screenshot_verify
@@ -89,6 +97,7 @@ print()
 print()
 print()
 
+# This is a function that is later used to take a screenshot
 def take_screenshot_func():
     dir = cd+"/_data/_screenshot"
     for f in os.listdir(dir):
@@ -100,13 +109,15 @@ def take_screenshot_func():
 # Prints keyboard and screenshot warning if it's the first time running.
 screenshot_verify()
 
+#-------ANYTHING BEYOND THIS POINT IS UNFINISHED AND IS SUBJECT TO CHANGE-------
+
 # This is where the actual script starts
 pygui.alert("Welcome.")
 
 # Displays the main menu
 main_menu()
 
-# This is the main loop. It will later be removed.
+# This is the main loop.
 while True:
     main_input = pygui.confirm("...", buttons=["Scan", "Quit"])
 
