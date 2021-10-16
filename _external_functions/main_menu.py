@@ -5,6 +5,7 @@ import PIL.Image
 import sys
 import os
 
+# Checks for libraries that might not be installed
 try:
     import tkinter as tk
     from tkinter import *
@@ -18,6 +19,7 @@ except:
     print("You need to install the pyautogui module (pip install pyautogui).")
     sys.exit()
 
+# Main function
 def main_menu():
     cd = os.getcwd()
 
@@ -25,11 +27,10 @@ def main_menu():
         window = tk.Tk()
 
         # Creates a photoimage object of the image in the path
-        # image1 = Image.open(cd+r"/Data/ExternalModules/Other/Side_Logo.png")
         image1 = open(cd+r"/_data/_external_functions/_other/side_sogo.png", "rb")
-        # imgtk = ImageTk.PhotoImage(image=PIL.Image.fromarray(image1))
         side_image_var = PhotoImage(file=cd+r"/_data/_external_functions/_other/side_logo.png")
 
+        # Functions that run when you click a button
         def quit_func():
             sys.exit()
         def info_func():
@@ -38,6 +39,7 @@ def main_menu():
             #break
             pass
 
+        # Main elements
         background_frame = tk.LabelFrame(
             background = "white",
         )
@@ -95,6 +97,7 @@ def main_menu():
             command = quit_func,
         )
 
+        # Packs all the elements
         start_button.pack()
         main_frame.pack(padx=0, pady=0)
         info_button.pack(side=tk.LEFT)

@@ -6,6 +6,7 @@ import pyautogui as pygui
 import sys
 import os
 
+# Main function
 def main_window():
     while True:
         window = tk.Tk()
