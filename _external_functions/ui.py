@@ -19,7 +19,7 @@ except:
     print("You need to install the pyautogui module (pip install pyautogui).")
     sys.exit()
 
-# Main function
+# Main menu
 def main_menu():
     # This gets the current working directory from file path files
     f = open(os.path.join(sys.path[0], "ef_file_path.txt"), "r")
@@ -110,3 +110,15 @@ def main_menu():
         background_frame.pack()
 
         window.mainloop()
+
+# Main window
+def main_window():
+    while True:
+        window = tk.Tk()
+
+        title_label = tk.Label(
+            text = "Select Lesson",
+            font = ("Arial", 75)
+        )
+
+        title_label.pack()
