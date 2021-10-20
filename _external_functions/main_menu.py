@@ -21,7 +21,10 @@ except:
 
 # Main function
 def main_menu():
-    cd = os.getcwd()
+    # This gets the current working directory from file path files
+    f = open(os.path.join(sys.path[0], "ef_file_path.txt"), "r")
+    cd = f.read()
+    f.close()
 
     while True:
         window = tk.Tk()

@@ -12,12 +12,21 @@ cv2_error = False
 pygui_error = False
 pytesseract_error = False
 
+# This gets the current working directory from file path files
+f = open(os.path.join(sys.path[0], "path.txt"), "r")
+cd = f.read()
+f.close()
+
 # This is the function checks what libraries need to be installed
 def library_install_check():
     libraries_that_need_installed = []
 
-    if platform.system() == "Windows":
-        # This adds color to the text if the os is Windows becuase I can't get it to work on Linux
+    f = open(cd+r"/_data/color_verification.txt")
+    color_verification_true = f.read()
+    f.close()
+
+    if color_verification_true == "1":
+        # This adds color to the text if the terminal uses colors
         if cv2_error == True:
             libraries_that_need_installed.append("  - \u001b[32mcv2\u001b[37m (pip install opencv-python)")
         if pygui_error == True:
@@ -31,7 +40,7 @@ def library_install_check():
         print()
         print()
     else:
-        # This is for any other operating system besides Windows
+        # This is if the terminal doesn't use colors
         if pygui_error == True:
             libraries_that_need_installed.append("  - pyautogui (pip install pyautogui)")
         if pytesseract_error == True:
@@ -46,7 +55,6 @@ def library_install_check():
         print()
 
     sys.exit()
-
 
 # This sees what libraries are or aren't installed
 try:
@@ -66,6 +74,11 @@ except:
 
 # ------------------------------------------------------------------------------
 
+if cd+r"/_data/run.txt" == "1":
+    pass
+else:
+    import set_file_path
+
 # This checks the platform of the host to send the right command to clear the termianl
 if platform.system() == "Windows":
     os.system('cls')
@@ -74,11 +87,6 @@ elif platform.system() == "Linux":
 
 # This checks if the required libraries are installed
 library_install_check()
-
-# This gets the current working directory from file path files
-f = open(os.path.join(sys.path[0], "my_file.txt"), "r")
-cd = f.read()
-f.close()
 
 # This imports functions from external scripts
 sys.path.insert(1, cd+'/_external_functions')
