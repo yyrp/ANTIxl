@@ -2,15 +2,20 @@
 # This script prints a warning for the user that says that this program takes and saves screenshots temporarily
 
 import os
+import sys
 
 # Main function
 def screenshot_verify():
     # This gets the current working directory from file path files
-    f = open(os.path.join(sys.path[0], "ef_file_path.txt"), "r")
-    cd = f.read()
+    file_path = __file__
+    cd_path = file_path[:-21]
+    print(cd_path)
+    f = open(cd_path+r"/ef_file_path.txt", 'r')
+    cd_path = f.read()
     f.close()
+
     # Sees if the warning has been sent before
-    f = open(cd+"/_data/run.txt", 'r')
+    f = open(cd_path+"/_data/run.txt", 'r')
     info = f.read()
 
     # If the warning has been sent, it doesn't send it again
@@ -24,6 +29,6 @@ def screenshot_verify():
         # Closes the file
         f.close()
         # Tells the program the warning has been sent
-        f = open(cd+"/_data/PermissionVerification.txt", 'w')
+        f = open(cd_path+"/_data/PermissionVerification.txt", 'w')
         f.write("1")
         f.close()

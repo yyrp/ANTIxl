@@ -13,9 +13,26 @@ pygui_error = False
 pytesseract_error = False
 
 # This gets the current working directory from file path files
-f = open(os.path.join(sys.path[0], "path.txt"), "r")
-cd = f.read()
-f.close()
+def get_cd():
+    file_path = __file__
+    cd = file_path[:-8]
+    # Prints the 'IXL-Bot' file path
+    print()
+    print("NOTE: The file path to 'IXL-Bot' is '"+file_path+"'")
+    print()
+    # Writes the file path to all the file path files
+    d = open(cd+r"/_data/data_file_path.txt", 'w')
+    e = open(cd+r"/_external_functions/ef_file_path.txt", 'w')
+    f = open(cd+r"/path.txt", 'w')
+    d.write(cd)
+    e.write(cd)
+    f.write(cd)
+    d.close()
+    e.close()
+    f.close()
+    return cd
+
+cd = get_cd()
 
 # This is the function checks what libraries need to be installed
 def library_install_check():
@@ -74,11 +91,6 @@ except:
 
 # ------------------------------------------------------------------------------
 
-if cd+r"/_data/run.txt" == "1":
-    pass
-else:
-    import set_file_path
-
 # This checks the platform of the host to send the right command to clear the termianl
 if platform.system() == "Windows":
     os.system('cls')
@@ -86,20 +98,23 @@ elif platform.system() == "Linux":
     os.system('clear')
 
 # This checks if the required libraries are installed
-library_install_check()
+if pygui_error == True:
+    library_install_check()
+elif cv2_error == True:
+    library_install_check()
+elif pytesseract_error == True:
+    library_install_check()
 
 # This imports functions from external scripts
 sys.path.insert(1, cd+'/_external_functions')
 
-from ScreenshotVerify import screenshot_verify
+from screenshot_verify import screenshot_verify
 
-from ScreenshotModules import take_screenshot
+from screenshot_functions import take_screenshot
 
-from MainMenu import main_menu
+from main_ui import main_menu
 
 sys.path.insert(1, cd)
-
-print("Done!")
 
 print()
 print()
@@ -132,6 +147,6 @@ while True:
     if main_input == "Quit":
         sys.exit()
     elif main_input == "Scan":
-        take_screenshot_func()
+        pygui.alert("This would normally take a screenshot, but that's not finished yet.")
     else:
         pygui.alert("Please enter a valid action.")
