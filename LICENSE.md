@@ -1,6 +1,8 @@
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
+(NOTE: just saying i didn't edit this at all. I think i was supposed to but i dont care. i'll just do it later.)
+
  Copyright (C) 1989, 1991 Free Software Foundation, Inc.,
  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  Everyone is permitted to copy and distribute verbatim copies
