@@ -5,7 +5,7 @@ import os
 
 # Main function
 def color_verify():
-    f = open("ef_file_path.txt", 'r')s
+    f = open("ef_file_path.txt", 'r')
     cd = f.read()
     f.close()
 
