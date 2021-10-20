@@ -1,14 +1,18 @@
 #!/usr/bin/python3
+
 # This script sees if color shows up in the terminal
 import os
 
 # Main function
 def color_verify():
-    cd = os.getcwd()
+    f = open("ef_file_path.txt", 'r')s
+    cd = f.read()
+    f.close()
 
     # Checks to see if the script has been run before
     f = open(cd+r"/_data/run.txt", 'r')
     info = f.read()
+    f.close()
 
     if info == "1":
         # Moves along with the script if it has been run before
