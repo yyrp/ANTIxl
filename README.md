@@ -21,7 +21,7 @@ USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT
 This will have support for lessons saved in the files. This is recommended if you want to get questions correct.
 
 ### AI version
-This version will use machine learning to solve problems. It will have to get questions wrong in order to get other questions right.
+This version will use machine learning to solve problems. It will have to get questions wrong in order to get other questions right. This might take awhile to make. This version will only have support for basic problems.
 
 ### Versions
  - (Unfinished) VERSION 0.1 Standard [beta]: This will have to be ran from the command line and it will not be an app that gets installed on your system. It will only have support for a few basic IXL lessons. This will probably not be very useful.
@@ -29,7 +29,7 @@ This version will use machine learning to solve problems. It will have to get qu
  - (Unfinished) VERSION 0.1 AI [beta]: This will add an AI mode that uses machine learning to solve problems. You probably shouldn't use this version if you want to get all the questions right. It will have to get questions wrong to work properly.
 
 ## THIS CURRENTLY DOES NOT WORK ON CHROMEBOOK
-I am writing most of this code from my Chromebook at school. I'm pretty sure most schools use Chromebook, so I'm trying to get this to work on that.
+I am writing most of this code from my Chromebook at school. I'm pretty sure most schools use Chromebook, so I'm trying to get it to work on that.
 
 Below is a list of functions that don't work on Chromebook.
 I still need to test if the screenshot function would work in a chroot.
@@ -44,7 +44,7 @@ Please don't sue me.
  This can run on Windows and Linux. (Sadly, it can't run on ChromeOS, but there might be a way to get it to run on a Chromebook using crouton [https://github.com/dnschneid/crouton]. I'll test this later.)
 
  It uses the following Python libraries:
-- pyaugoui
+- pyautogui
 - pytesseract
 - cv2 (opencv-python)
 - tkinter
