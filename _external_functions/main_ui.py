@@ -22,9 +22,12 @@ except:
 # Main menu
 def main_menu():
     # This gets the current working directory from file path files
-    f = open(os.path.join(sys.path[0], "ef_file_path.txt"), "r")
+    file_path = __file__
+    cd = file_path[:-11]
+    f = open(cd+r"/external_modules/ef_file_path.txt", 'r')
     cd = f.read()
     f.close()
+    data_path = file_path[:-11]
 
     while True:
         window = tk.Tk()

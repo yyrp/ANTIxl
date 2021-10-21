@@ -1,1 +1,1 @@
-C:\Users\19414\Documents\GitHub\IXL-Bot
+/home/maritatol23/IXL-Bot/
