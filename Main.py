@@ -116,10 +116,6 @@ from main_ui import main_menu
 
 sys.path.insert(1, cd)
 
-print()
-print()
-print()
-
 # This is a function that is later used to take a screenshot
 def take_screenshot_func():
     dir = cd+"/_data/_screenshot"
