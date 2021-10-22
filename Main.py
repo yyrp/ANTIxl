@@ -132,7 +132,7 @@ def take_screenshot_func():
 # Prints keyboard and screenshot warning if it's the first time running.
 screenshot_verify()
 
-#-------ANYTHING BEYOND THIS POINT IS UNFINISHED AND IS SUBJECT TO CHANGE-------
+# -------ANYTHING BEYOND THIS POINT IS UNFINISHED AND IS GOING TO CHANGE--------
 
 # This is where the actual script starts
 pygui.alert("Welcome.")
@@ -142,7 +142,7 @@ main_menu()
 
 # This is the main loop.
 while True:
-    main_input = pygui.confirm("...", buttons=["Scan", "Quit"])
+    main_input = pygui.confirm("Please select an option.", buttons=["Scan", "Quit"])
 
     if main_input == "Quit":
         sys.exit()
