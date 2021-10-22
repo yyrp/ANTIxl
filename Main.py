@@ -15,10 +15,10 @@ pytesseract_error = False
 # This gets the current working directory from file path files
 def get_cd():
     file_path = __file__
-    cd = file_path[:-9]
+    cd = os.path.dirname(__file__)[:-1]
     # Prints the 'IXL-Bot' file path
     print()
-    print("NOTE: The file path to 'IXL-Bot' is '"+file_path+"'")
+    print("NOTE: The file path to 'IXL-Bot' is '"+cd+"'")
     print()
     # Writes the file path to all the file path files
     d = open(cd+r"/_data/data_file_path.txt", 'w')

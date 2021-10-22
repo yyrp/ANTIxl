@@ -23,18 +23,18 @@ except:
 def main_menu():
     # This gets the current working directory from file path files
     file_path = __file__
-    cd = file_path[:-11]
-    f = open(cd+r"/external_modules/ef_file_path.txt", 'r')
+    cd = os.path.dirname(__file__)
+    f = open(cd+r"/ef_file_path.txt", 'r')
     cd = f.read()
     f.close()
-    data_path = file_path[:-11]
+    print()
 
     while True:
         window = tk.Tk()
 
         # Creates a photoimage object of the image in the path
-        image1 = open(cd+r"/_data/_external_functions/_other/side_sogo.png", "rb")
-        side_image_var = PhotoImage(file=cd+r"/_data/_external_functions/_other/side_logo.png")
+        image1 = open(cd+r"_external_functions/_other/side_logo.png", "rb")
+        side_image_var = PhotoImage(file=cd+r"_external_functions/_other/side_logo.png")
 
         # Functions that run when you click a button
         def quit_func():

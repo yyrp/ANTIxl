@@ -8,14 +8,14 @@ import sys
 def screenshot_verify():
     # This gets the current working directory from file path files
     file_path = __file__
-    cd_path = file_path[:-21]
-    print(cd_path)
-    f = open(cd_path+r"/ef_file_path.txt", 'r')
-    cd_path = f.read()
+    cd = os.path.dirname(__file__)
+    f = open(cd+r"/ef_file_path.txt", 'r')
+    cd = f.read()
     f.close()
+    print()
 
     # Sees if the warning has been sent before
-    f = open(cd_path+"/_data/run.txt", 'r')
+    f = open(cd+"/_data/run.txt", 'r')
     info = f.read()
 
     # If the warning has been sent, it doesn't send it again
@@ -29,6 +29,6 @@ def screenshot_verify():
         # Closes the file
         f.close()
         # Tells the program the warning has been sent
-        f = open(cd_path+"/_data/PermissionVerification.txt", 'w')
+        f = open(cd+"/_data/PermissionVerification.txt", 'w')
         f.write("1")
         f.close()
