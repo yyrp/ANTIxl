@@ -2,15 +2,20 @@
 
 import pyautogui as pygui
 import os
+import sys
 
 # Main function
 def take_screenshot():
     # Takes screenshot
     ss = pygui.screenshot()
+
     # This gets the current working directory from file path files
-    f = open(os.path.join(sys.path[0], "ef_file_path.txt"), "r")
+    file_path = __file__
+    cd = os.path.dirname(__file__)
+    f = open(cd+r"/ef_file_path.txt", 'r')
     cd = f.read()
     f.close()
+
     # Saves screenshot
     ss.save("Screenshot.png")
     # Moves screenshot to '_screenshot'

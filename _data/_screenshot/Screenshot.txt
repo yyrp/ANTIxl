@@ -1,2 +1,0 @@
-WARNING:
-Anything in this directory will be deleted.

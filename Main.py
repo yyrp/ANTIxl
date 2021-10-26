@@ -116,7 +116,7 @@ from main_ui import main_menu
 
 sys.path.insert(1, cd)
 
-# This is a function that is later used to take a screenshot
+# This is a function that is used to take a screenshot. It is currently not in use.
 def take_screenshot_func():
     dir = cd+"/_data/_screenshot"
     for f in os.listdir(dir):
@@ -143,6 +143,6 @@ while True:
     if main_input == "Quit":
         sys.exit()
     elif main_input == "Scan":
-        pygui.alert("This would normally take a screenshot, but that's not finished yet.")
+        take_screenshot_func()
     else:
         pygui.alert("Please enter a valid action.")
