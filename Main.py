@@ -6,6 +6,7 @@ print("Importing modules...")
 import sys
 import os
 import platform
+import json
 
 # These variables are used to see what libraries are or aren't installed
 cv2_error = False
@@ -20,16 +21,15 @@ def get_cd():
     print()
     print("NOTE: The file path to 'IXL-Bot' is '"+cd+"'")
     print()
+
     # Writes the file path to all the file path files
-    d = open(cd+r"/_data/data_file_path.txt", 'w')
-    e = open(cd+r"/_external_functions/ef_file_path.txt", 'w')
-    f = open(cd+r"/path.txt", 'w')
-    d.write(cd)
-    e.write(cd)
-    f.write(cd)
-    d.close()
-    e.close()
-    f.close()
+    with open(cd+r"/_data/data_file_path.txt", 'w') as dump_file:
+        json.dump(cd, dump_file)
+    with open(cd+r"/_external_functions/ef_file_path.txt", 'w') as dump_file:
+        json.dump(cd, dump_file)
+    with open(cd+r"/path.txt", 'w') as dump_file:
+        json.dump(cd, dump_file)
+    
     return cd
 
 cd = get_cd()
