@@ -43,8 +43,8 @@ def main_menu():
     window = tk.Tk()
 
     # Creates a photoimage object of the image in the path
-    image1 = open(cd+r"_external_functions/_other/side_logo.png", "rb")
-    side_image_var = PhotoImage(file=cd+r"_external_functions/_other/side_logo.png")
+    image1 = open(cd+r"/_external_functions/_other/side_logo.png", "rb")
+    side_image_var = PhotoImage(file=cd+r"/_external_functions/_other/side_logo.png")
 
     # Main elements
     background_frame = tk.LabelFrame(
