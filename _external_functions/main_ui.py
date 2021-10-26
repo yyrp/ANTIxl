@@ -4,11 +4,16 @@ from PIL import Image, ImageTk
 import PIL.Image
 import sys
 import os
+import json
 
 # Checks for libraries that might not be installed
 try:
-    import tkinter as tk
-    from tkinter import *
+    try:
+        import tkinter as tk
+        from tkinter import *
+    except:
+        import Tkinter as tk
+        from Tkinter import *
 except:
     print("You need to install the tkinter module (sudo apt-get install python3-tk python3-dev).")
     sys.exit()
@@ -23,10 +28,8 @@ except:
 def main_menu():
     # This gets the current working directory from file path files
     file_path = __file__
-    cd = os.path.dirname(__file__)
-    f = open(cd+r"/ef_file_path.txt", 'r')
-    cd = f.read()
-    f.close()
+    file_directory = os.path.dirname(__file__)
+    cd = json.load(file_directory+r"ef_file_path.json")
     print()
 
 
