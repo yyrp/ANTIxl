@@ -6,9 +6,9 @@ import os
 # Main function
 def color_verify():
     # This gets the current working directory from file path files
-    f = open(os.path.join(sys.path[0], "ef_file_path.txt"), "r")
-    cd = f.read()
-    f.close()
+    file_path = __file__
+    file_directory = os.path.dirname(__file__)
+    cd = json.load(file_directory+r"ef_file_path.json")
 
     # Checks to see if the script has been run before
     f = open(cd+r"/_data/run.txt", 'r')

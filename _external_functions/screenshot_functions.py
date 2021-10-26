@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
 import pyautogui as pygui
 import os
 import sys
+import json
 
 # Main function
 def take_screenshot():
@@ -11,10 +11,8 @@ def take_screenshot():
 
     # This gets the current working directory from file path files
     file_path = __file__
-    cd = os.path.dirname(__file__)
-    f = open(cd+r"/ef_file_path.txt", 'r')
-    cd = f.read()
-    f.close()
+    file_directory = os.path.dirname(__file__)
+    cd = json.load(file_directory+r"ef_file_path.json")
 
     # Saves screenshot
     ss.save("Screenshot.png")

@@ -23,13 +23,13 @@ def get_cd():
     print()
 
     # Writes the file path to all the file path files
-    with open(cd+r"/_data/data_file_path.txt", 'w') as dump_file:
+    with open(cd+r"/_data/data_file_path.json", 'w') as dump_file:
         json.dump(cd, dump_file)
-    with open(cd+r"/_external_functions/ef_file_path.txt", 'w') as dump_file:
+    with open(cd+r"/_external_functions/ef_file_path.json", 'w') as dump_file:
         json.dump(cd, dump_file)
-    with open(cd+r"/path.txt", 'w') as dump_file:
+    with open(cd+r"/path.json", 'w') as dump_file:
         json.dump(cd, dump_file)
-    
+
     return cd
 
 cd = get_cd()

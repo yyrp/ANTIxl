@@ -36,6 +36,7 @@ I still need to test if the screenshot function would work in a chroot.
 
 LIST OF STUFF THAT DOESN'T WORK (This will be updated):
 - ```pyautogui.screenshot()``` - It works, but it just returns a black screen.
+- ```keyboard.write('')``` won't let me do anything.
 
 ## If Someone From IXL Sees This
 Please don't sue me.

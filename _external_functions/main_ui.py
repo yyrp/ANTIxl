@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 from PIL import Image, ImageTk
 import PIL.Image
 import sys
@@ -30,7 +29,6 @@ def main_menu():
     file_path = __file__
     file_directory = os.path.dirname(__file__)
     cd = json.load(file_directory+r"ef_file_path.json")
-    print()
 
 
     # Functions that run when you click a button

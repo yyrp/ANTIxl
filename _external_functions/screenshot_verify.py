@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # This script prints a warning for the user that says that this program takes and saves screenshots temporarily
-
+import json
 import os
 import sys
 
@@ -8,11 +8,8 @@ import sys
 def screenshot_verify():
     # This gets the current working directory from file path files
     file_path = __file__
-    cd = os.path.dirname(__file__)
-    f = open(cd+r"/ef_file_path.txt", 'r')
-    cd = f.read()
-    f.close()
-    print()
+    file_directory = os.path.dirname(__file__)
+    cd = json.load(file_directory+"/ef_file_path.json")
 
     # Sees if the warning has been sent before
     f = open(cd+"/_data/run.txt", 'r')
