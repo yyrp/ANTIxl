@@ -3,13 +3,15 @@
 import json
 import os
 import sys
+import time
 
 # Main function
 def screenshot_verify():
     # This gets the current working directory from file path files
-    file_path = __file__
+    file_path = __file__[:-1]
     file_directory = os.path.dirname(__file__)
-    cd = json.load(file_directory+"/ef_file_path.json")
+    file = open(file_directory+r"/ef_file_path.json")
+    cd = json.load(file)
 
     # Sees if the warning has been sent before
     f = open(cd+"/_data/run.txt", 'r')

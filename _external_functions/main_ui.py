@@ -26,9 +26,10 @@ except:
 # Main menu
 def main_menu():
     # This gets the current working directory from file path files
-    file_path = __file__
+    file_path = __file__[:-1]
     file_directory = os.path.dirname(__file__)
-    cd = json.load(file_directory+r"ef_file_path.json")
+    file = open(file_directory+r"/ef_file_path.json")
+    cd = json.load(file)
 
 
     # Functions that run when you click a button
