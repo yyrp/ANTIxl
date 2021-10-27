@@ -38,38 +38,19 @@ cd = get_cd()
 def library_install_check():
     libraries_that_need_installed = []
 
-    f = open(cd+r"/_data/color_verification.txt")
-    color_verification_true = f.read()
-    f.close()
+    # This prints what libraries need to be installed
+    if pygui_error == True:
+        libraries_that_need_installed.append("  - pyautogui (pip install pyautogui)")
+    if pytesseract_error == True:
+        libraries_that_need_installed.append("  - pytesseract (pip install pytesseract)")
+    if cv2_error == True:
+        libraries_that_need_installed.append("  - cv2 (pip install opencv-python)")
 
-    if color_verification_true == "1":
-        # This adds color to the text if the terminal uses colors
-        if cv2_error == True:
-            libraries_that_need_installed.append("  - \u001b[32mcv2\u001b[37m (pip install opencv-python)")
-        if pygui_error == True:
-            libraries_that_need_installed.append("  - \u001b[32mpyautogui\u001b[37m (pip install pyautogui)")
-        if pytesseract_error == True:
-            libraries_that_need_installed.append("  - \u001b[32mpytesseract\u001b[37m (pip install pytesseract)")
-
-        print()
-        print(" \u001b[31mERROR:\u001b[37m You need to install the following libraries:")
-        print(libraries_that_need_installed)
-        print()
-        print()
-    else:
-        # This is if the terminal doesn't use colors
-        if pygui_error == True:
-            libraries_that_need_installed.append("  - pyautogui (pip install pyautogui)")
-        if pytesseract_error == True:
-            libraries_that_need_installed.append("  - pytesseract (pip install pytesseract)")
-        if cv2_error == True:
-            libraries_that_need_installed.append("  - cv2 (pip install opencv-python)")
-
-        print()
-        print(" ERROR: You need to install the following libraries:")
-        print("\n".join(libraries_that_need_installed))
-        print()
-        print()
+    print()
+    print(" ERROR: You need to install the following libraries:")
+    print("\n".join(libraries_that_need_installed))
+    print()
+    print()
 
     sys.exit()
 
@@ -128,13 +109,13 @@ def take_screenshot_func():
 # Prints keyboard and screenshot warning if it's the first time running.
 screenshot_verify()
 
-# -------ANYTHING BEYOND THIS POINT IS UNFINISHED AND IS GOING TO CHANGE--------
-
 # This is where the actual script starts
 pygui.alert("Welcome.")
 
 # Displays the main menu
 main_menu()
+
+# -------ANYTHING BEYOND THIS POINT IS UNFINISHED AND IS GOING TO CHANGE--------
 
 # This is the main loop.
 while True:

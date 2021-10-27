@@ -6,13 +6,14 @@ import json
 
 # Main function
 def take_screenshot():
+    # This gets the current working directory from file path files
+    file_path = __file__[:-1]
+    file_directory = os.path.dirname(__file__)
+    file = open(file_directory+r"/ef_file_path.json")
+    cd = json.load(file)
+    
     # Takes screenshot
     ss = pygui.screenshot()
-
-    # This gets the current working directory from file path files
-    file_path = __file__
-    file_directory = os.path.dirname(__file__)
-    cd = json.load(file_directory+r"ef_file_path.json")
 
     # Saves screenshot
     ss.save("Screenshot.png")

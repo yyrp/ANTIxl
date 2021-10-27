@@ -30,6 +30,7 @@ def main_menu():
     file_directory = os.path.dirname(__file__)
     file = open(file_directory+r"/ef_file_path.json")
     cd = json.load(file)
+    file.close()
 
 
     # Functions that run when you click a button

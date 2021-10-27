@@ -10,24 +10,21 @@ def screenshot_verify():
     # This gets the current working directory from file path files
     file_path = __file__[:-1]
     file_directory = os.path.dirname(__file__)
-    file = open(file_directory+r"/ef_file_path.json")
-    cd = json.load(file)
+    with open(file_directory+r"/ef_file_path.json") as file:
+        cd = json.load(file)
 
-    # Sees if the warning has been sent before
-    f = open(cd+"/_data/run.txt", 'r')
-    info = f.read()
+    # This gets info from run.json
+    file = open(cd+r"/_data/run.json")
+    info = json.load(file)
+    file.close()
 
-    # If the warning has been sent, it doesn't send it again
     if info == "1":
-        # Closes the file
-        f.close()
+        # If the warning has been sent, it doesn't send it again
         pass
-    # If it hasn't been sent, it prints it into the terminal
     else:
+        # If the warning hasn't been sent, it prints it into the terminal
         print("WARNING: You are giving this program permission to acess your keyboard and take screenshots. Screenshots will later be deleted and are not saved.")
-        # Closes the file
-        f.close()
         # Tells the program the warning has been sent
-        f = open(cd+"/_data/PermissionVerification.txt", 'w')
-        f.write("1")
-        f.close()
+        run_info = "1"
+        with open(cd+r"/_data/run.json", 'w') as dump_file:
+            json.dump(run_info, dump_file)
