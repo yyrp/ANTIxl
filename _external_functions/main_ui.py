@@ -38,12 +38,13 @@ def main_menu():
         sys.exit()
 
     def info_func():
-        pygui.alert("Made by Lucas Maritato\nOS: Windows 10, Linux\n(Sadly, it can't run on Chromebook.)")
+        pygui.alert("Made by me.\nOS: Windows 10, Linux\n(Sadly, it can't run on Chromebook.)")
 
     def on_closing():
         sys.exit()
 
     window = tk.Tk()
+    window.title("Main Menu | IXL-Bot")
 
     # Creates a photoimage object of the image in the path
     image1 = open(cd+r"/_external_functions/_other/side_logo.png", "rb")
@@ -85,7 +86,7 @@ def main_menu():
         background_frame_1,
         text = "Info",
         foreground = "white",
-        background = "yellow",
+        background = "#F1C40F",
         activebackground = "grey",
         activeforeground = "white",
         font=("Arial", 25),
