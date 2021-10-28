@@ -47,8 +47,17 @@ def main_menu():
     window.title("Main Menu | IXL-Bot")
 
     # Creates a photoimage object of the image in the path
-    image1 = open(cd+r"/_external_functions/_other/side_logo.png", "rb")
-    side_image_var = PhotoImage(file=cd+r"/_external_functions/_other/side_logo.png")
+    # image1 = open(cd+r"/_external_functions/_other/update_info_001.png", "rb")
+    # image2 = image1.resize((500, 375),Image.ANTIALIAS)
+    # side_image_var = PhotoImage(file=cd+r"/_external_functions/_other/update_info_001.png")
+
+    # Read the Image
+    image = Image.open("Image File Path")
+
+    # Resize the image using resize() method
+    resize_image = image.resize((width, height))
+
+    img = ImageTk.PhotoImage(resize_image)
 
     # Main elements
     background_frame = tk.LabelFrame(
@@ -77,9 +86,11 @@ def main_menu():
         command = window.destroy,
     )
 
+    resize_image = side_image_var.resize((500, 375))
+
     side_logo = tk.Label(
         background_frame,
-        image = side_image_var,
+        resize_image = side_image_var,
     )
 
     info_button = tk.Button(
