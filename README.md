@@ -12,7 +12,7 @@ USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT
  - COME UP WITH A BETTER NAME THAN "IXL-Bot"
  - Create better logo
  - Finish writing 'main_menu.py'
- - Find out if I can use html instead of tkinter because that would be easier
+ - Find out how to use tkinter styles
 
 ## RELEASE INFORMATION
 (The current version of this program is unusable. When a usable version comes out, it will be added to "Releases".)
