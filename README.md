@@ -7,8 +7,10 @@ This is a program that does IXL automatically. It takes a screenshot, scans the 
 ### IMPORTANT:
 USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT MY FAULT. Please do not use this unless you have extreme anxiety and depression from IXL.
 
+## If you don't know what any of this means
+All you need to know is it is not finished and will be easier to use when it's finished.
+
 ## Stuff I need to do right now:
- - Finish writing "color_verification.py" and add it to 'Main.py'
  - COME UP WITH A BETTER NAME THAN "IXL-Bot"
  - Create better logo
  - Finish writing 'main_menu.py'
