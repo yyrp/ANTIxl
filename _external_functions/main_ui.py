@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from PIL import Image, ImageTk
+from PIL import ImageTk
 import PIL.Image
 import sys
 import os
@@ -51,13 +51,17 @@ def main_menu():
     # image2 = image1.resize((500, 375),Image.ANTIALIAS)
     # side_image_var = PhotoImage(file=cd+r"/_external_functions/_other/update_info_001.png")
 
+    # Converts cd into a raw string
+    cd.encode('unicode-escape').decode()
+
     # Read the Image
-    image = Image.open("Image File Path")
+    first_image = open(cd+r"/_external_functions/_other/update_info_001.png", 'r')
+    # main_image = PIL.Image.open(first_image)
 
     # Resize the image using resize() method
-    resize_image = image.resize((width, height))
+    resized_image = first_image.resize((500, 375))
 
-    img = ImageTk.PhotoImage(resize_image)
+    img = ImageTk.PhotoImage(resized_image)
 
     # Main elements
     background_frame = tk.LabelFrame(
@@ -86,11 +90,9 @@ def main_menu():
         command = window.destroy,
     )
 
-    resize_image = side_image_var.resize((500, 375))
-
     side_logo = tk.Label(
         background_frame,
-        resize_image = side_image_var,
+        image = img,
     )
 
     info_button = tk.Button(
