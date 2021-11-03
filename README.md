@@ -67,3 +67,4 @@ I'm going to put a password on this so I know who's using it, but if you know Py
 This project is a work in progress. It is not currently usable. It will be added to "Releases" once a usable version comes out.
 
 If you need to contact me you can email [hxl9500@gmail.com](mailto:hxl5900@gmail.com?subject=[IXL-Bot]%20Source%20Han%20Sans).
+(Just saying I don't check my inbox that often.)
