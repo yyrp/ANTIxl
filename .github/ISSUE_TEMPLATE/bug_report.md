@@ -3,7 +3,7 @@ name: Bug report
 about: Create an issue about a bug
 title: Bug report
 labels: bug
-assignees: ''
+assignees: Zbomb2000
 
 ---
 
