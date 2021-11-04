@@ -13,8 +13,7 @@ USING THIS IS CONSIDERED CHEATING! IF YOU GET IN TROUBLE FOR USING THIS IT'S NOT
 All you need to know is it is not finished and will be easier to use when it's finished.
 
 ## Stuff I need to do right now:
- - COME UP WITH A BETTER NAME THAN "IXL-Bot"
- - Create better logo
+ - Create logo
  - Finish writing 'main_menu.py'
  - Find out how to use tkinter styles
 
