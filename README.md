@@ -1,7 +1,9 @@
 ### ⚠ WARNING ⚠
 This is a very unprofessional GitHub repository. If you have any complaints, I'm too lazy so I probably won't do anything about it.
+### NOTE:
+I just changed the name of this program from IXL-Bot to ANTIxl. There might still be stuff that is outdated. I'll fix that later.
 
-# IXL-BOT
+# ANTIxl
 This is a program that does IXL automatically. It takes a screenshot, scans the screenshot for text, solves the problem, and types it it. This is nowhere near finished. There is probably a way more efficient way of doing this but I don't care.
 
 ### IMPORTANT:
