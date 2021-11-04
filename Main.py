@@ -34,6 +34,18 @@ def get_cd():
 
 cd = get_cd()
 
+# This runs the script that installs the required libraries
+def install_required_libraries():
+    # Runs install script if the OS is Linux
+    if platform.system == "Linux":
+        os.system('clear')
+        os.system('chmod +x '+cd+'/_external_functions/_other/install_all_libraries_py3.sh')
+        os.system('./'+cd+'/_external_functions/_other/install_all_libraries_py3.sh')
+    # Runs install script if the OS is Windows (not yet supported)
+    else:
+        print("Windows is not yet supported for manually installing files.")
+        sys.exit()
+
 # This is the function checks what libraries need to be installed
 def library_install_check():
     libraries_that_need_installed = []
@@ -52,7 +64,32 @@ def library_install_check():
     print()
     print()
 
-    sys.exit()
+    # Asks to install librareis automatically
+    while True:
+        print("It seems there are required libraries that are not installed.")
+        # Gets input
+        install_libraries_input = input("Would you like to install these libraries? (y/n): ")
+
+        # Processes input
+        if input1.lower() == "y":
+            # Runs the file that installes the libraries
+            install_required_libraries()
+            break
+        elif input1.lower() == "n":
+            # Exits the program
+            print("You will need to install the librareis manually.")
+            sys.exit()
+        elif input1.lower() == "yes":
+            # Runs the file that installes the libraries
+            install_required_libraries()
+            break
+        elif input1.lower() == "no":
+            # Exits the program
+            print("You will need to install the librareis manually.")
+            sys.exit()
+        else:
+            print("Please type 'y' or 'n'.")
+            print()
 
 # This sees what libraries are or aren't installed
 try:
