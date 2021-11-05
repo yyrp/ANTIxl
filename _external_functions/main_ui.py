@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from PIL import Image, ImageTk
+from PIL import ImageTk
 import PIL.Image
 import sys
 import os
@@ -49,7 +49,25 @@ def main_menu():
     window.title("Main Menu | IXL-Bot")
 
     # Creates a photoimage object of the image in the path
+<<<<<<< HEAD
     side_image_var = PhotoImage(file = cd+r"/_external_functions/_other/update_info_001.png")
+=======
+    # image1 = open(cd+r"/_external_functions/_other/update_info_001.png", "rb")
+    # image2 = image1.resize((500, 375),Image.ANTIALIAS)
+    # side_image_var = PhotoImage(file=cd+r"/_external_functions/_other/update_info_001.png")
+
+    # Converts cd into a raw string
+    cd.encode('unicode-escape').decode()
+
+    # Read the Image
+    first_image = open(cd+r"/_external_functions/_other/update_info_001.png", 'r')
+    # main_image = PIL.Image.open(first_image)
+
+    # Resize the image using resize() method
+    resized_image = first_image.resize((500, 375))
+
+    img = ImageTk.PhotoImage(resized_image)
+>>>>>>> origin/menu_side_image
 
     # Main elements
     background_frame = tk.LabelFrame(
@@ -80,7 +98,11 @@ def main_menu():
 
     side_logo = tk.Label(
         background_frame,
+<<<<<<< HEAD
         image = side_image_var,
+=======
+        image = img,
+>>>>>>> origin/menu_side_image
     )
 
     info_button = tk.Button(
