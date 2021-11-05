@@ -38,13 +38,20 @@ cd = get_cd()
 def install_required_libraries():
     # Runs install script if the OS is Linux
     if platform.system == "Linux":
+        # Clears terminal
         os.system('clear')
+        # Allows execution premissions to run the script
         os.system('chmod +x '+cd+'/_external_functions/_other/install_all_libraries_py3.sh')
+        # Runs script
         os.system('./'+cd+'/_external_functions/_other/install_all_libraries_py3.sh')
+
     # Runs install script if the OS is Windows
-    if platform.system == "Linux":
+    elif platform.system == "Linux":
+        # Clears terminal
         os.system('cls')
+        # Runs script
         os.system(cd+'/_external_functions/_other/install_all_libraries_py3_windows.bat')
+        # Sees if all the packages were installed sucessfully
         with open(cd+r"/_external_functions/_other/") as read_file:
             all_packages_installed = json.load(read_file)
 
