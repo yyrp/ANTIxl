@@ -41,9 +41,20 @@ def install_required_libraries():
         os.system('clear')
         os.system('chmod +x '+cd+'/_external_functions/_other/install_all_libraries_py3.sh')
         os.system('./'+cd+'/_external_functions/_other/install_all_libraries_py3.sh')
-    # Runs install script if the OS is Windows (not yet supported)
+    # Runs install script if the OS is Windows
+    if platform.system == "Linux":
+        os.system('cls')
+        os.system(cd+'/_external_functions/_other/install_all_libraries_py3_windows.bat')
+        with open(cd+r"/_external_functions/_other/") as read_file:
+            all_packages_installed = json.load(read_file)
+
+        if all_packages_installed == 1:
+            pass
+        else:
+            print("All the packages were not installed.")
+            sys.exit()
     else:
-        print("Windows is not yet supported for manually installing files.")
+        print("The OS you are using is not supported.")
         sys.exit()
 
 # This is the function checks what libraries need to be installed

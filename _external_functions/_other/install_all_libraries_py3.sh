@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Installing libraries..."
 
 # Installs pip3 if it hasn't already been installed
 sudo apt install python3-pip
@@ -49,6 +50,8 @@ fi
 
 if [ $ALL_PACKAGES_INSTALLED == 0 ]
 then
-  echo "All required libraries are installed."
+  echo "All required libraries were sucessfully installed!"
+  echo "0" > all_packages_installed.json
 fi
+
 exit

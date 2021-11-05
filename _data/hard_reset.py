@@ -66,6 +66,11 @@ with open(cd+r"/_data/run.json", 'w') as dump_file:
     json.dump(reset_data, dump_file)
 time.sleep(0.1)
 
+print("Reseting 'all_packages_installed.json'")
+with open(cd+r"/_external_functions/_other/all_packages_installed.json", 'w') as dump_file:
+    json.dump(reset_data, dump_file)
+time.sleep(0.1)
+
 print("Done!")
 time.sleep(3)
 
